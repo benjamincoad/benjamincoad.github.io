@@ -37,12 +37,14 @@
 										<h1>Ozymandias - A Java Game</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<span class="image main"><img src="images/ozymandias_banner.jpg" alt="" /></span>
 
 									<section id="banner">
 										<div class="content">
 											<p>This sonnet by Percy Bysshe Shelly is my inspiration for Ozymandias, a short game (currently in progress) that I am making in Java without a game engine. It follows the main character on their journey to take down Ozymandias, a mighty ruler who has stolen the holy grimoire, a book of spells that contains ancient knowledge of powerful magic capable of granting its user godlike abilities.</p>
 											<p>This project uses the Java swing library to create a window and draw elements to it using Graphics2D. The game runs at 60 frames per second and has custom-made animations, pixel art, music, and more.</p>
+											<img src="images/player_spin.gif" alt="Ozymandias player spinning" />
+											<blockquote>(The player sprite)</blockquote>
 										</div>
 										<span class="image object">
 											<h2>Ozymandias by Percy Bysshe Shelley</h2>
@@ -65,10 +67,25 @@
 
 									<hr class="major">
 
-									<h2>Tilemap</h2>
+									<h2>Artwork</h2>
+									<p>The art in the game is all done by me primarily in Aseprite, an amazing pixel art software. I used it for all the pixel art in the game. The character sprites are heavily inspired by early Pokemon games such as Pokemon Yellow. I used character sprites from Pokemon Yellow as a base to edit and make my own. This helped a lot with the animation process.</p>
+
+									<h2>World Map and Tile System</h2>
 									<p>For the tilemap I made a bunch 16 by 16 pixel tiles and set them to different indexes in an array. I then made a text file containing numbers separated by spaces. The numbers represent those indexes in the array at which tiles are stored. My tile manager class takes this text file and puts the indexes into an array for the tilemap this is read when tiles are being drawn. When drawing the tiles, I check to see what tiles would be displayed with the camera and only draw those close to the camera as to not have to draw the entire map at once to save memory when rendering.</p>
 
+									<h2>Music</h2>
+									<p>The game's music is inspired by games such as the Legend of Zelda and other NES games. Using beepbox.com, I was able to make a retro-style chiptune soundtrack that doesn't get too repetitive while playing the game for extended periods of time.</p>
+									<img src="images/beepbox.jpg" alt="Image of beepbox.com" style="width:500px;height:500px;">
+									<blockquote>beepbox.com</blockquote>
+
+									<h2>Game Objects</h2>
+									<p>Objects can be created and placed around the map using a system involving a superclass called GameObject of which there is an array in the GamePanel class holding all the objects that are placed in the game. This superclass contains variables such as the x and y coordinates of the object, the collision box dimensions, object name, and object image. To create an object I create a class that extends the GameObject class that gives values to previously described variables. To draw these objects on the screen I have another class called AssetSetter where I instantiate the GameObjects in the GameObject array located in the GamePanel class and set x and y values that correspond to the coordinates of the tile I want the object to be placed on.</p>
+
+									<h2>Entities</h2>
+									<p>Like game objects, I have a superclass called Entity that holds many of the variables an entity needs to use such as speed, images, direction, animation speed, collision box, etc. This allows me to have subclasses like NPC subclasses and the placer subclass that instantiate these variables and describe their own methods to make each entity unique. </p>
 									<hr class="major" />
+
+									<a href="#" class="button">Download Coming Soon</a>
 								</section>
 
 						</div>
