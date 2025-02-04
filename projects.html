@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Benjamin Coad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="game-container">
+    <header class="game-header">
+        <div class="retro-badge">
+            <span class="badge-text">bencoad.com</span>
+        </div>
+        <h1>Projects</h1>
+        <div class="pixel-divider"></div>
+    </header>
+
+    <nav class="game-tabs">
+        <a href="index.html" class="game-tab">Home<span class="tab-hover">🏠</span></a>
+        <a href="projects.html" class="game-tab active">Projects<span class="tab-hover">💻</span></a>
+        <a href="blog.html" class="game-tab">Blog<span class="tab-hover">📝</span></a>
+        <a href="art.html" class="game-tab">Art<span class="tab-hover">🎨</span></a>
+        <a href="contact.html" class="game-tab">Contact<span class="tab-hover">📫</span></a>
+    </nav>
+
+    <main class="game-content">
+        <div class="grid-container">
+            <!-- Featured Project -->
+            <div class="content-section featured-project">
+                <h2>Featured Project</h2>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/assets/project/just-a-hangout-img1.png" alt="Project Screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Just A Hangout</h3>
+                        <p>This is a recent roblox game that I completed and am working on updating currently.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Game</span>
+                            <span class="tech-tag">Luau</span>
+                            <span class="tech-tag">Roblox</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.roblox.com/games/112063832744922/just-a-hangout" class="game-button">Play</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project/ozymandias-img1.png" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Ozymandias</h3>
+                        <p>A cool little game I'm making entirely in Java with no game engine.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Game</span>
+                            <span class="tech-tag">Java</span>
+                        </div>
+                        <a href="#" class="game-button">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project/plex-system-calculator-img1.png" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>PLEX System Calculator</h3>
+                        <p>A calculator made in Java Swing for a debt leverage financial system.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Java Swing</span>
+                        </div>
+                        <a href="#" class="game-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="pixel-divider"></div>
+        <p>Made with ❤️ and ☕</p>
+        <div class="retro-links">
+            <a href="#">GitHub</a> •
+            <a href="#">Twitter</a> •
+            <a href="#">Email</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.game-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Get the content ID from the tab
+            const contentId = tab.getAttribute('data-content');
+
+            // If it's not the current page, navigate to it
+            if (contentId === 'home') window.location.href = 'index.html';
+            else if (contentId === 'blog') window.location.href = 'blog.html';
+            else if (contentId === 'contact') window.location.href = 'contact.html';
+            // Don't navigate if clicking projects tab since we're already here
+        });
+    });
+</script>
+</body>
+</html>

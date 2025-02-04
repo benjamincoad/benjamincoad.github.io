@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Benjamin Coad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="game-container">
+  <header class="game-header">
+    <div class="retro-badge">
+      <span class="badge-text">bencoad.com</span>
+    </div>
+    <h1>Blog</h1>
+    <div class="pixel-divider"></div>
+  </header>
+
+  <nav class="game-tabs">
+    <a href="index.html" class="game-tab">Home<span class="tab-hover">🏠</span></a>
+    <a href="projects.html" class="game-tab">Projects<span class="tab-hover">💻</span></a>
+    <a href="blog.html" class="game-tab active">Blog<span class="tab-hover">📝</span></a>
+    <a href="art.html" class="game-tab">Art<span class="tab-hover">🎨</span></a>
+    <a href="contact.html" class="game-tab">Contact<span class="tab-hover">📫</span></a>
+  </nav>
+
+  <main class="game-content">
+    <!-- Featured Post -->
+    <div class="content-section featured-post">
+      <span class="post-date">January 25, 2025</span>
+      <h2>Voidigo: The Best Roguelike Nobody Knows About</h2>
+      <div class="post-preview">
+        <img src="assets/blog/voidigo-img1.jpg" alt="Featured Post Image" class="featured-image">
+        <p>Voidigo is my favorite roguelike of all time. It includes beautiful, fluid animations, funny yet powerful items, and intense boss battles and yet nobody seems to know it exists.</p>
+        <div class="post-tags">
+          <span class="tag">Games</span>
+        </div>
+        <a href="#" class="game-button">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div class="blog-grid">
+      <!-- Post 1 -->
+      <article class="blog-card">
+        <div class="post-image">
+          <img src="/api/placeholder/400/200" alt="Blog Post 1">
+        </div>
+        <div class="post-content">
+          <span class="post-date">January 20, 2025</span>
+          <h3>Blog Post Title</h3>
+          <p>Short preview of the blog post content...</p>
+          <div class="post-tags">
+            <span class="tag">Code</span>
+            <span class="tag">Tutorial</span>
+          </div>
+          <a href="#" class="game-button">Read More</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="blog-card">
+        <div class="post-image">
+          <img src="/api/placeholder/400/200" alt="Blog Post 2">
+        </div>
+        <div class="post-content">
+          <span class="post-date">January 15, 2025</span>
+          <h3>Another Blog Post</h3>
+          <p>Another preview of blog content...</p>
+          <div class="post-tags">
+            <span class="tag">Projects</span>
+            <span class="tag">Updates</span>
+          </div>
+          <a href="#" class="game-button">Read More</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="blog-card">
+        <div class="post-image">
+          <img src="/api/placeholder/400/200" alt="Blog Post 3">
+        </div>
+        <div class="post-content">
+          <span class="post-date">January 10, 2025</span>
+          <h3>Yet Another Post</h3>
+          <p>More blog post preview content...</p>
+          <div class="post-tags">
+            <span class="tag">Thoughts</span>
+            <span class="tag">Tech</span>
+          </div>
+          <a href="#" class="game-button">Read More</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="pixel-divider"></div>
+    <p>Made with ❤️ and ☕</p>
+    <div class="retro-links">
+      <a href="#">GitHub</a> •
+      <a href="#">Twitter</a> •
+      <a href="#">Email</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.game-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const contentId = tab.getAttribute('data-content');
+      if (contentId === 'home') window.location.href = 'index.html';
+      else if (contentId === 'projects') window.location.href = 'projects.html';
+      else if (contentId === 'contact') window.location.href = 'contact.html';
+    });
+  });
+</script>
+</body>
+</html>
