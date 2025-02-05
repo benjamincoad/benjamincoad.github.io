@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Retro Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="window">
+    <div class="title-bar">
+        <div class="title-bar-text">bencoad.com</div>
+        <div class="title-bar-controls">
+            <button class="title-bar-button">_</button>
+            <button class="title-bar-button">□</button>
+            <button class="title-bar-button">×</button>
+        </div>
+    </div>
+
+    <div class="menu-bar">
+        <a href="#home" class="menu-item active" onclick="showPage('home')">Home</a>
+        <a href="#projects" class="menu-item" onclick="showPage('projects')">Projects</a>
+        <a href="#art" class="menu-item" onclick="showPage('art')">Art</a>
+        <a href="#contact" class="menu-item" onclick="showPage('contact')">Contact</a>
+    </div>
+
+    <div class="window-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="section home-intro">
+                <div class="avatar-container">
+                    <div class="avatar-frame">
+                        <img src="avatar.jpeg" alt="Ben Coad" class="avatar-image">
+                    </div>
+                </div>
+                <div class="intro-text">
+                    <h1>Welcome to bencoad.com</h1>
+                    <p>Hey I'm Ben! I'm a developer and digital artist. Here you can check out some of my work!</p>
+                    <p>This website is a collection of my work made in HTML. I hope you like it!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects" class="page">
+            <div class="section">
+                <h2>Coding Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="fdup.png" alt="fdup command line tool thumbnail" class="project-preview">
+                        </div>
+                        <h3>fdup - File Duplicate Finder</h3>
+                        <p>A Python CLI tool that efficiently detects and manages duplicate files. Features include smart size-based pre-filtering, SHA-256 hash verification, and customizable directory ignore patterns. Helps you reclaim disk space while ensuring data safety.</p>
+                        <div class="tool-features">
+                            <span class="feature-tag">Python</span>
+                            <span class="feature-tag">CLI</span>
+                            <span class="feature-tag">SHA-256</span>
+                            <span class="feature-tag">File Management</span>
+                        </div>
+                        <br>
+                        <a href="https://github.com/benjamincoad/fdup">View on GitHub →</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dtree.png" alt="dtree command line tool thumbnail" class="project-preview">
+                        </div>
+                        <h3>dtree - Directory Tree Visualizer</h3>
+                        <p>A Python CLI tool that generates a visual tree representation of directory structures. Features customizable ignore patterns for excluding specific directories, pretty-printed formatting with Unicode characters, and intelligent sorting with directories first.</p>
+                        <div class="tool-features">
+                            <span class="feature-tag">Python</span>
+                            <span class="feature-tag">CLI</span>
+                            <span class="feature-tag">File System</span>
+                            <span class="feature-tag">Visualization</span>
+                        </div>
+                        <br>
+                        <a href="https://github.com/benjamincoad/dtree">View on GitHub →</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="fclone.png" alt="fclone command line tool thumbnail" class="project-preview">
+                        </div>
+                        <h3>fclone - File Clone Utility</h3>
+                        <p>A streamlined Python CLI tool for copying files with optional renaming. Features include automatic directory creation, preservation of file metadata, and built-in error handling for common file operations. Perfect for quick file management tasks.</p>
+                        <div class="tool-features">
+                            <span class="feature-tag">Python</span>
+                            <span class="feature-tag">CLI</span>
+                            <span class="feature-tag">File Management</span>
+                            <span class="feature-tag">Utility</span>
+                        </div>
+                        <br>
+                        <a href="https://github.com/benjamincoad/fclone">View on GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Art Page -->
+        <div id="art" class="page">
+            <div class="section">
+                <h2>Artwork Gallery</h2>
+                <div class="message-box">
+                    <div class="message-icon">❗</div>
+                    <div class="message-content">
+                        <div class="message-title">Coming Soon</div>
+                        <div class="message-text">This gallery is currently under construction. Check back later to see my artwork!</div>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Artwork 1</h3>
+                        <p>Description of your artwork piece.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Artwork 2</h3>
+                        <p>Description of another artwork piece.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Artwork 3</h3>
+                        <p>Description of another artwork piece.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <div class="section">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out! You can find me at:</p>
+
+                <form class="contact-form" action="https://formspree.io/f/xgvoygng" method="POST">
+                    <div class="form-field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                    <div id="form-status" class="status-message"></div>
+                </form>
+
+                <div class="section">
+                    <h3>Other Ways to Connect</h3>
+                    <p>
+                        GitHub: <a href="https://github.com/benjamincoad">benjamincoad</a><br>
+                        YouTube: <a href="https://www.youtube.com/@babjamin">@babjamin</a><br>
+                        Instagram: <a href="https://www.instagram.com/benjacoad/">@benjacoad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        bencoad.com
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
