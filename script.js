@@ -1,3 +1,25 @@
+// Page navigation
+function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    // Show selected page
+    document.getElementById(pageId).classList.add('active');
+
+    // Update menu items
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('active');
+    });
+
+    // Find and update active menu item
+    document.querySelector(`[href="#${pageId}"]`).classList.add('active');
+
+    // Scroll to top
+    window.scrollTo(0, 0);
+}
+
 // Form handling
 const form = document.querySelector('.contact-form');
 const formStatus = document.getElementById('form-status');
@@ -30,33 +52,73 @@ if (form) {
     });
 }
 
-// Page navigation
-function showPage(pageId) {
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
+// Artwork Preview Functionality
+function showArtworkPreview(imageSrc, title) {
+    const modal = document.getElementById('artworkPreview');
+    const previewImage = document.getElementById('previewImage');
+    const previewTitle = document.getElementById('previewTitle');
+
+    previewImage.src = imageSrc;
+    previewTitle.textContent = title;
+    modal.style.display = 'block';
+
+    // Close on clicking outside
+    modal.onclick = function(e) {
+        if (e.target === modal) {
+            closeArtworkPreview();
+        }
+    };
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeArtworkPreview();
+        }
     });
-
-    // Show selected page
-    document.getElementById(pageId).classList.add('active');
-
-    // Update menu items
-    document.querySelectorAll('.menu-item').forEach(item => {
-        item.classList.remove('active');
-    });
-
-    // Update active menu item
-    event.target.classList.add('active');
 }
 
-// Initialize status bar clock
-function updateStatusBar() {
-    const statusBar = document.querySelector('.status-bar');
+function closeArtworkPreview() {
+    const modal = document.getElementById('artworkPreview');
+    modal.style.display = 'none';
+}
+
+// Start Menu Functionality
+function toggleStartMenu(event) {
+    event.stopPropagation();
+    const startMenu = document.getElementById('startMenu');
+    startMenu.classList.toggle('active');
+}
+
+// Close start menu when clicking outside
+document.addEventListener('click', (event) => {
+    const startMenu = document.getElementById('startMenu');
+    const startButton = document.querySelector('.start-button');
+
+    if (!startMenu.contains(event.target) && event.target !== startButton) {
+        startMenu.classList.remove('active');
+    }
+});
+
+// Navigation from Start Menu
+function navigateTo(pageId) {
+    const startMenu = document.getElementById('startMenu');
+    startMenu.classList.remove('active');
+    showPage(pageId);
+}
+
+// Taskbar Clock
+function updateTaskbarClock() {
+    const clock = document.getElementById('taskbarClock');
     const now = new Date();
-    const time = now.toLocaleTimeString();
-    statusBar.textContent = `Ready | ${time}`;
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    const displayMinutes = minutes.toString().padStart(2, '0');
+
+    clock.textContent = `${displayHours}:${displayMinutes} ${ampm}`;
 }
 
-// Update clock every second
-setInterval(updateStatusBar, 1000);
-updateStatusBar(); // Initial update
+// Initialize
+setInterval(updateTaskbarClock, 1000);
+updateTaskbarClock();

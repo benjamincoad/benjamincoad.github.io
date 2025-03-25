@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     background-color: #008080;
     font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
@@ -6,6 +7,7 @@ body {
     color: #000;
 }
 
+/* Window Structure */
 .window {
     background-color: #c0c0c0;
     border: 3px solid #dfdfdf;
@@ -56,6 +58,7 @@ body {
     border-bottom-color: white;
 }
 
+/* Navigation Styles */
 .menu-bar {
     background: #c0c0c0;
     padding: 4px;
@@ -83,10 +86,31 @@ body {
     color: white;
 }
 
-.section {
-    margin: 20px 0;
+/* Status Bar */
+.status-bar {
+    background: #c0c0c0;
+    border-top: 2px solid #404040;
+    padding: 3px 5px;
+    font-size: 12px;
+    margin-top: 20px;
 }
 
+/* Basic Typography */
+h1, h2, h3 {
+    color: #000080;
+    margin-top: 0;
+}
+
+a {
+    color: #000080;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Project Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -105,33 +129,19 @@ body {
 .project-image {
     width: 100%;
     height: 150px;
-    background: #c0c0c0;
-    margin-bottom: 10px;
+    background: #f0f0f0;
     border: 2px inset #fff;
+    overflow: hidden;
 }
 
-h1, h2, h3 {
-    color: #000080;
-    margin-top: 0;
+.project-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-a {
-    color: #000080;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.status-bar {
-    background: #c0c0c0;
-    border-top: 2px solid #404040;
-    padding: 3px 5px;
-    font-size: 12px;
-    margin-top: 20px;
-}
-
+/* Form Styles */
 .contact-form {
     display: grid;
     gap: 10px;
@@ -185,6 +195,7 @@ button:active {
     display: block;
 }
 
+/* Page Layout */
 .page {
     display: none;
 }
@@ -193,6 +204,7 @@ button:active {
     display: block;
 }
 
+/* Home Page Layout */
 .home-intro {
     display: flex;
     gap: 20px;
@@ -225,33 +237,7 @@ button:active {
     flex: 1;
 }
 
-/* For smaller screens */
-@media (max-width: 600px) {
-    .home-intro {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .avatar-container {
-        margin-bottom: 20px;
-    }
-}
-.project-image {
-    width: 100%;
-    height: 150px;
-    background: #f0f0f0;
-    border: 2px inset #fff;
-    overflow: hidden;
-}
-
-.project-preview {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
+/* Message Box (Used for alerts/notifications) */
 .message-box {
     display: flex;
     align-items: start;
@@ -284,4 +270,534 @@ button:active {
     color: #333;
     font-size: 12px;
     line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .home-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar-container {
+        margin-bottom: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Blog Layout */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Blog Post Window */
+.notepad-window {
+    background: #c0c0c0;
+    border: 3px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    margin-bottom: 20px;
+}
+
+.notepad-title-bar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.notepad-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.notepad-menu {
+    background: #c0c0c0;
+    padding: 4px;
+    border-bottom: 1px solid #404040;
+    font-size: 12px;
+}
+
+.notepad-menu span {
+    margin-right: 12px;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.notepad-menu span:hover {
+    background: #000080;
+    color: white;
+}
+
+/* Blog Content */
+.blog-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    white-space: normal;
+}
+
+.blog-title {
+    font-size: 24px;
+    color: #000080;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.blog-meta {
+    font-size: 12px;
+    color: #666;
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: 1px solid #d4d4d4;
+    margin-bottom: 20px;
+}
+
+.blog-text p {
+    margin: 0 0 16px 0;
+}
+
+/* Blog Headers */
+.blog-text h2 {
+    font-size: 20px;
+    color: #000080;
+    margin: 25px 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d4d4d4;
+}
+
+.blog-text h3 {
+    font-size: 18px;
+    color: #000080;
+    margin: 20px 0 10px 0;
+}
+
+/* Blog Elements */
+.blog-image-container {
+    background: #fff;
+    border: 2px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.blog-image-container img {
+    width: 100%;
+    display: block;
+    border: 1px solid #808080;
+}
+
+.blog-image-caption {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.blog-code {
+    background: #f8f8f8;
+    border: 2px inset #fff;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+    padding: 15px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+.blog-code-title {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+}
+
+.blog-quote {
+    background: #f0f0f0;
+    border-left: 4px solid #000080;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.blog-info {
+    background: #f0f0f0;
+    border: 2px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.blog-info-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000080;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Blog Tags */
+.blog-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.blog-tag {
+    background: #f0f0f0;
+    border: 1px solid #d4d4d4;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #666;
+    border-radius: 2px;
+}
+
+.blog-divider {
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    margin: 25px 0;
+}
+
+.notepad-status {
+    background: #c0c0c0;
+    padding: 3px 5px;
+    border-top: 1px solid #404040;
+    font-size: 11px;
+    color: #333;
+}
+
+/* Art Gallery Window */
+.paint-window {
+    background: #c0c0c0;
+    border: 3px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    margin-bottom: 20px;
+}
+
+.paint-title-bar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.paint-menu {
+    background: #c0c0c0;
+    padding: 4px;
+    border-bottom: 1px solid #404040;
+}
+
+.paint-menu span {
+    margin-right: 12px;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.paint-menu span:hover {
+    background: #000080;
+    color: white;
+}
+
+.paint-workspace {
+    display: flex;
+    background: #c0c0c0;
+    padding: 2px;
+    gap: 2px;
+}
+
+.paint-toolbar {
+    width: 50px;
+    background: #c0c0c0;
+    border: 2px inset #fff;
+    padding: 2px;
+}
+
+.tool-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.tool-btn {
+    width: 20px;
+    height: 20px;
+    background: #c0c0c0;
+    border: 1px solid #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tool-btn:hover {
+    background: #d4d4d4;
+}
+
+.tool-btn.active {
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.paint-canvas {
+    flex: 1;
+    background: #fff;
+    border: 2px inset #fff;
+    padding: 10px;
+    min-height: 400px;
+}
+
+/* Art Gallery Grid */
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.artwork-item {
+    border: 1px solid #808080;
+    padding: 5px;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.artwork-item:hover {
+    transform: scale(1.02);
+}
+
+.artwork-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.artwork-title {
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    background: #f0f0f0;
+    border-top: 1px solid #808080;
+}
+
+/* Artwork Preview Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c0c0c0;
+    border: 3px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content {
+    padding: 10px;
+    background: #fff;
+    border: 2px inset #fff;
+    overflow: auto;
+}
+
+.modal-content img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(90vh - 100px);
+    margin: 0 auto;
+}
+
+/* Taskbar */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background: #c0c0c0;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    z-index: 1000;
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+    font-size: 11px;
+    image-rendering: pixelated;
+}
+
+/* Start Button */
+.start-button {
+    height: 22px;
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #c0c0c0;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 6px;
+    position: relative;
+    color: #000000;
+    text-shadow: 1px 1px #ffffff;
+}
+
+.start-button:active {
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: inset 1px 1px #808080, inset -1px -1px #dfdfdf;
+    padding: 4px 7px 2px 9px;
+}
+
+/* Start Menu */
+.start-menu {
+    position: fixed;
+    bottom: 28px;
+    left: 0;
+    width: 180px;  /* Slightly narrower to match screenshot */
+    background: #c0c0c0;
+    border: 2px solid #000000;
+    border-bottom: none;
+    display: none;
+    box-shadow: 2px -2px 4px rgba(0,0,0,0.2);
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+    font-size: 11px;
+    padding: 2px;
+}
+
+.start-menu-item {
+    padding: 3px 4px;  /* Reduced padding */
+    display: flex;
+    align-items: center;
+    gap: 4px;  /* Reduced gap */
+    cursor: pointer;
+    height: 22px;  /* Reduced height */
+}
+
+.start-menu-item img {
+    width: 16px;  /* Smaller icons */
+    height: 16px;
+    image-rendering: pixelated;
+}
+
+.start-button img {
+    width: 14px;  /* Smaller start button icon */
+    height: 14px;
+    image-rendering: pixelated;
+}
+
+.start-menu-item span {
+    flex: 1;
+    font-size: 11px;  /* Ensure text size matches */
+}
+
+.start-menu-item:hover {
+    background: #000080;
+    color: white;
+}
+
+.start-menu.active {
+    display: block;
+}
+
+/* Taskbar Clock */
+.taskbar-clock {
+    margin-left: auto;
+    padding: 2px 8px;
+    background: #c0c0c0;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #404040;
+    font-size: 11px;
+}
+
+/* Blog Post Grid Layout */
+.blog-post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.blog-post-card {
+    background: #f0f0f0;
+    border: 2px solid #dfdfdf;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.blog-post-card:hover {
+    transform: scale(1.02);
+}
+
+.blog-post-icon {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-right: 10px;
+    image-rendering: pixelated;
+}
+
+.blog-post-title {
+    color: #000080;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.blog-post-date {
+    color: #666;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.blog-post-excerpt {
+    font-size: 12px;
+    margin-top: 10px;
+    clear: both;
 }

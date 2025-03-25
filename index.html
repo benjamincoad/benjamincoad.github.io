@@ -17,10 +17,11 @@
     </div>
 
     <div class="menu-bar">
-        <a href="#home" class="menu-item active" onclick="showPage('home')">Home</a>
-        <a href="#projects" class="menu-item" onclick="showPage('projects')">Projects</a>
-        <a href="#art" class="menu-item" onclick="showPage('art')">Art</a>
-        <a href="#contact" class="menu-item" onclick="showPage('contact')">Contact</a>
+        <a href="#" class="menu-item active" onclick="showPage('home', event)">Home</a>
+        <a href="#" class="menu-item" onclick="showPage('projects', event)">Projects</a>
+        <a href="#" class="menu-item" onclick="showPage('art', event)">Art</a>
+        <a href="#" class="menu-item" onclick="showPage('blog', event)">Blog</a>
+        <a href="#" class="menu-item" onclick="showPage('contact', event)">Contact</a>
     </div>
 
     <div class="window-content">
@@ -47,7 +48,7 @@
                 <div class="project-grid">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="fdup.png" alt="fdup command line tool thumbnail" class="project-preview">
+                            <img src="projects/img/fdup.png" alt="fdup command line tool" class="project-preview">
                         </div>
                         <h3>fdup - File Duplicate Finder</h3>
                         <p>A Python CLI tool that efficiently detects and manages duplicate files. Features include smart size-based pre-filtering, SHA-256 hash verification, and customizable directory ignore patterns. Helps you reclaim disk space while ensuring data safety.</p>
@@ -62,7 +63,7 @@
                     </div>
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="dtree.png" alt="dtree command line tool thumbnail" class="project-preview">
+                            <img src="projects/img/dtree.png" alt="dtree command line tool" class="project-preview">
                         </div>
                         <h3>dtree - Directory Tree Visualizer</h3>
                         <p>A Python CLI tool that generates a visual tree representation of directory structures. Features customizable ignore patterns for excluding specific directories, pretty-printed formatting with Unicode characters, and intelligent sorting with directories first.</p>
@@ -77,7 +78,7 @@
                     </div>
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="fclone.png" alt="fclone command line tool thumbnail" class="project-preview">
+                            <img src="projects/img/fclone.png" alt="fclone command line tool" class="project-preview">
                         </div>
                         <h3>fclone - File Clone Utility</h3>
                         <p>A streamlined Python CLI tool for copying files with optional renaming. Features include automatic directory creation, preservation of file metadata, and built-in error handling for common file operations. Perfect for quick file management tasks.</p>
@@ -90,36 +91,148 @@
                         <br>
                         <a href="https://github.com/benjamincoad/fclone">View on GitHub →</a>
                     </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="projects/img/justahangoutthumbnail.png" alt="just a hangout Roblox Game" class="project-preview">
+                        </div>
+                        <h3>just a hangout - Roblox Game</h3>
+                        <p>A cool little game I made on Roblox. Check it out!</p>
+                        <div class="tool-features">
+                            <span class="feature-tag">Roblox</span>
+                            <span class="feature-tag">Game</span>
+                            <span class="feature-tag">Luau</span>
+                        </div>
+                        <br>
+                        <a href="https://www.roblox.com/games/112063832744922/just-a-hangout">Play on Roblox →</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Blog Page -->
+        <div id="blog" class="page">
+            <div class="section">
+                <h2>Blog Posts</h2>
+                <div class="blog-post-grid">
+                    <!-- Each blog post card links to a separate HTML file -->
+                    <div class="blog-post-card" onclick="window.location.href='blog/blog-post-template.html'">
+                        <img src="images/blog-icon.png" alt="" class="blog-post-icon">
+                        <div class="blog-post-title">Test</div>
+                        <div class="blog-post-date">Jan 1, 2000</div>
+                        <div class="blog-post-excerpt">Template blog post.</div>
+                    </div>
+
+                    <div class="blog-post-card" onclick="window.location.href='blog/'">
+                        <img src="images/blog-icon.png" alt="" class="blog-post-icon">
+                        <div class="blog-post-title">Placeholder</div>
+                        <div class="blog-post-date">Jan 1, 2000</div>
+                        <div class="blog-post-excerpt">Placeholder blog post. This does nothing right now.</div>
+                    </div>
+
+                    <!-- Add more blog post cards as needed -->
+                </div>
+            </div>
+        </div>
+
 
         <!-- Art Page -->
         <div id="art" class="page">
             <div class="section">
                 <h2>Artwork Gallery</h2>
-                <div class="message-box">
-                    <div class="message-icon">❗</div>
-                    <div class="message-content">
-                        <div class="message-title">Coming Soon</div>
-                        <div class="message-text">This gallery is currently under construction. Check back later to see my artwork!</div>
+                <div class="paint-window">
+                    <div class="paint-title-bar">
+                        <span>untitled - Paint</span>
+                        <div class="title-bar-controls">
+                            <button class="title-bar-button">_</button>
+                            <button class="title-bar-button">□</button>
+                            <button class="title-bar-button">×</button>
+                        </div>
                     </div>
-                </div>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <div class="project-image"></div>
-                        <h3>Artwork 1</h3>
-                        <p>Description of your artwork piece.</p>
+                    <div class="paint-menu">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>View</span>
+                        <span>Image</span>
+                        <span>Colors</span>
+                        <span>Help</span>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image"></div>
-                        <h3>Artwork 2</h3>
-                        <p>Description of another artwork piece.</p>
+                    <div class="paint-workspace">
+                        <div class="paint-toolbar">
+                            <div class="tool-group">
+                                <div class="tool-btn" title="Free-form Select">📋</div>
+                                <div class="tool-btn" title="Select">⬚</div>
+                                <div class="tool-btn" title="Eraser">❌</div>
+                                <div class="tool-btn active" title="Fill">🎨</div>
+                                <div class="tool-btn" title="Pick Color">💧</div>
+                                <div class="tool-btn" title="Magnifier">🔍</div>
+                                <div class="tool-btn" title="Pencil">✏️</div>
+                                <div class="tool-btn" title="Brush">🖌️</div>
+                                <div class="tool-btn" title="Spray">💨</div>
+                                <div class="tool-btn" title="Text">🔤</div>
+                                <div class="tool-btn" title="Line">📏</div>
+                                <div class="tool-btn" title="Curve">↪️</div>
+                                <div class="tool-btn" title="Rectangle">⬜</div>
+                                <div class="tool-btn" title="Polygon">🔷</div>
+                                <div class="tool-btn" title="Ellipse">⭕</div>
+                            </div>
+                        </div>
+                        <div class="paint-canvas">
+                            <div class="artwork-grid">
+                                <div class="artwork-item" onclick="showArtworkPreview('art/desmos.png', 'desmos')">
+                                    <img src="art/desmos.png" alt="desmos.png">
+                                    <div class="artwork-title">Desmos</div>
+                                </div>
+                                <div class="artwork-item" onclick="showArtworkPreview('art/jimbob.png', 'jimbob')">
+                                    <img src="art/jimbob.png" alt="jimbob.png">
+                                    <div class="artwork-title">Jimbob</div>
+                                </div>
+                                <div class="artwork-item" onclick="showArtworkPreview('art/hi.gif', 'hi')">
+                                    <img src="art/hi.gif" alt="hi.gif">
+                                    <div class="artwork-title">Hi</div>
+                                </div>
+                            </div>
+
+                            <!-- Preview Modal -->
+                            <div id="artworkPreview" class="modal">
+                                <div class="modal-window">
+                                    <div class="paint-title-bar">
+                                        <span id="previewTitle">Image Preview</span>
+                                        <div class="title-bar-controls">
+                                            <button class="title-bar-button" onclick="closeArtworkPreview()">×</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-content">
+                                        <img id="previewImage" src="" alt="Preview">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image"></div>
-                        <h3>Artwork 3</h3>
-                        <p>Description of another artwork piece.</p>
+                    <div class="paint-color-palette">
+                        <div class="color-row">
+                            <div class="color-btn" style="background: #000000"></div>
+                            <div class="color-btn" style="background: #808080"></div>
+                            <div class="color-btn" style="background: #800000"></div>
+                            <div class="color-btn" style="background: #808000"></div>
+                            <div class="color-btn" style="background: #008000"></div>
+                            <div class="color-btn" style="background: #008080"></div>
+                            <div class="color-btn" style="background: #000080"></div>
+                            <div class="color-btn" style="background: #800080"></div>
+                            <div class="color-btn" style="background: #808040"></div>
+                            <div class="color-btn" style="background: #004040"></div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-btn" style="background: #FFFFFF"></div>
+                            <div class="color-btn" style="background: #C0C0C0"></div>
+                            <div class="color-btn" style="background: #FF0000"></div>
+                            <div class="color-btn" style="background: #FFFF00"></div>
+                            <div class="color-btn" style="background: #00FF00"></div>
+                            <div class="color-btn" style="background: #00FFFF"></div>
+                            <div class="color-btn" style="background: #0000FF"></div>
+                            <div class="color-btn" style="background: #FF00FF"></div>
+                            <div class="color-btn" style="background: #FFFF80"></div>
+                            <div class="color-btn" style="background: #80FFFF"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,7 +242,7 @@
         <div id="contact" class="page">
             <div class="section">
                 <h2>Contact Me</h2>
-                <p>Feel free to reach out! You can find me at:</p>
+                <p>Feel free to reach out! You can email me with this form here:</p>
 
                 <form class="contact-form" action="https://formspree.io/f/xgvoygng" method="POST">
                     <div class="form-field">
@@ -164,10 +277,39 @@
     </div>
 
     <div class="status-bar">
-        bencoad.com
+        bencoad.com | <span id="time"></span>
     </div>
 </div>
 
 <script src="script.js"></script>
-</body>
+<!-- Taskbar -->
+<div class="taskbar">
+    <button class="start-button" onclick="toggleStartMenu(event)">
+        <img src="images/windows-logo.png" alt="Start">
+        Start
+    </button>
+    <div class="start-menu" id="startMenu">
+        <div class="start-menu-item" onclick="navigateTo('home')">
+            <img src="images/home-icon.png" alt="">
+            <span>Home</span>
+        </div>
+        <div class="start-menu-item" onclick="navigateTo('projects')">
+            <img src="images/projects-icon.png" alt="">
+            <span>Projects</span>
+        </div>
+        <div class="start-menu-item" onclick="navigateTo('art')">
+            <img src="images/art-icon.png" alt="">
+            <span>Art Gallery</span>
+        </div>
+        <div class="start-menu-item" onclick="navigateTo('blog')">
+            <img src="images/blog-icon.png" alt="">
+            <span>Blog</span>
+        </div>
+        <div class="start-menu-item" onclick="navigateTo('contact')">
+            <img src="images/contact-icon.png" alt="">
+            <span>Contact</span>
+        </div>
+    </div>
+    <div id="taskbarClock" class="taskbar-clock"></div>
+</div>
 </html>
