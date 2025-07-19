@@ -2,7 +2,7 @@
 // Main JavaScript functionality
 
 // YouTube API Configuration
-const YOUTUBE_API_KEY = 'AIzaSyA16HETjclvrJlG02hjtHUfHX9BOm-8tJA';
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || '';
 const YOUTUBE_CHANNEL_HANDLE = '@babjamin';
 const YOUTUBE_CHANNEL_ID = 'UCxqAWLTk1CmBvZFPzeZMd9A'; // @babjamin
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3';
