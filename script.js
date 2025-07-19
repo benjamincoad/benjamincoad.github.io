@@ -3,6 +3,7 @@
 
 // YouTube API Configuration
 const YOUTUBE_API_KEY = 'AIzaSyA16HETjclvrJlG02hjtHUfHX9BOm-8tJA';
+const YOUTUBE_CHANNEL_HANDLE = '@babjamin';
 const YOUTUBE_CHANNEL_ID = 'UCxqAWLTk1CmBvZFPzeZMd9A'; // @babjamin
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3';
 
@@ -54,28 +55,54 @@ async function loadYouTubeVideos() {
     if (!youtubeContent) return;
     
     try {
-        // Fetch channel uploads playlist
-        const channelResponse = await fetch(
-            `${YOUTUBE_API_URL}/channels?part=contentDetails&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`
-        );
+        // First try to get channel info by handle
+        let channelResponse;
+        let channelData;
         
-        if (!channelResponse.ok) {
-            throw new Error('Failed to fetch channel data');
+        try {
+            // Try using the handle first (newer API method)
+            channelResponse = await fetch(
+                `${YOUTUBE_API_URL}/channels?part=contentDetails,snippet&forHandle=${YOUTUBE_CHANNEL_HANDLE}&key=${YOUTUBE_API_KEY}`
+            );
+            
+            if (channelResponse.ok) {
+                channelData = await channelResponse.json();
+            }
+        } catch (handleError) {
+            console.log('Handle method failed, trying channel ID:', handleError);
         }
         
-        const channelData = await channelResponse.json();
-        const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+        // If handle method failed, try with channel ID
+        if (!channelData || !channelData.items || channelData.items.length === 0) {
+            channelResponse = await fetch(
+                `${YOUTUBE_API_URL}/channels?part=contentDetails,snippet&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`
+            );
+            
+            if (!channelResponse.ok) {
+                throw new Error(`Failed to fetch channel data: ${channelResponse.status} ${channelResponse.statusText}`);
+            }
+            
+            channelData = await channelResponse.json();
+        }
         
-        // Fetch latest 3 videos
+        if (!channelData.items || channelData.items.length === 0) {
+            throw new Error('No channel found');
+        }
+        
+        const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+        console.log('Found uploads playlist:', uploadsPlaylistId);
+        
+        // Fetch latest 3 videos from uploads playlist
         const videosResponse = await fetch(
-            `${YOUTUBE_API_URL}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=3&key=${YOUTUBE_API_KEY}`
+            `${YOUTUBE_API_URL}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=3&order=date&key=${YOUTUBE_API_KEY}`
         );
         
         if (!videosResponse.ok) {
-            throw new Error('Failed to fetch videos');
+            throw new Error(`Failed to fetch videos: ${videosResponse.status} ${videosResponse.statusText}`);
         }
         
         const videosData = await videosResponse.json();
+        console.log('Fetched videos:', videosData);
         
         // Clear loading state
         if (loadingElement) {
@@ -83,10 +110,17 @@ async function loadYouTubeVideos() {
         }
         
         // Render videos
-        renderYouTubeVideos(videosData.items, youtubeContent);
+        if (videosData.items && videosData.items.length > 0) {
+            renderYouTubeVideos(videosData.items, youtubeContent);
+        } else {
+            throw new Error('No videos found');
+        }
         
     } catch (error) {
         console.error('Error loading YouTube videos:', error);
+        if (loadingElement) {
+            loadingElement.remove();
+        }
         renderFallbackVideos(youtubeContent);
     }
 }
@@ -107,7 +141,17 @@ function renderYouTubeVideos(videos, container) {
 
 // Render individual video card
 function renderVideoCard(video, isFeatured = false) {
-    const { videoId, title, publishedAt, thumbnails } = video.snippet;
+    const snippet = video.snippet;
+    const videoId = snippet.resourceId ? snippet.resourceId.videoId : snippet.videoId;
+    const title = snippet.title;
+    const publishedAt = snippet.publishedAt;
+    const thumbnails = snippet.thumbnails;
+    
+    if (!videoId) {
+        console.error('No video ID found for video:', video);
+        return '';
+    }
+    
     const publishDate = new Date(publishedAt).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
@@ -124,12 +168,16 @@ function renderVideoCard(video, isFeatured = false) {
                 <iframe 
                     src="https://www.youtube.com/embed/${videoId}" 
                     title="${escapeHtml(title)}"
-                    allowfullscreen>
+                    allowfullscreen
+                    loading="lazy">
                 </iframe>
             </div>
             <div class="video-info">
                 <h3 class="video-title">${escapeHtml(title)}</h3>
                 <p class="video-date">${publishDate}</p>
+                <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="video-link">
+                    Watch on YouTube →
+                </a>
             </div>
         </div>
     `;

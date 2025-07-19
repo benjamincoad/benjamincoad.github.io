@@ -85,20 +85,20 @@
                 <h2 class="text-center">Featured Post</h2>
                 <p class="text-center text-secondary">Latest thoughts and insights</p>
                 
-                <div style="margin-top: var(--space-xl); max-width: 900px; margin-left: auto; margin-right: auto;">
-                    <article class="blog-card" style="border: 2px solid var(--accent-green); background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 255, 65, 0.03) 100%);">
-                        <div class="blog-image" style="height: 300px;">
+                <div class="featured-post-container">
+                    <article class="blog-card featured-post">
+                        <div class="blog-image featured-image">
                             <img src="assets/blog/voidigo-img1.jpg" alt="Voidigo - The Best Roguelike Nobody Knows About">
                         </div>
                         <div class="blog-content">
-                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
-                                <span style="background: var(--gradient-green); color: var(--bg-primary); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">FEATURED</span>
+                            <div class="featured-post-meta">
+                                <span class="featured-badge">FEATURED</span>
                                 <span class="blog-date">January 25, 2025</span>
                             </div>
-                            <h3 class="blog-title" style="font-size: 1.5rem; margin-bottom: var(--space-md);">
+                            <h3 class="blog-title featured-title">
                                 Voidigo: The Best Roguelike Nobody Knows About
                             </h3>
-                            <p class="blog-excerpt" style="font-size: 1rem; line-height: 1.7; margin-bottom: var(--space-lg);">
+                            <p class="blog-excerpt featured-excerpt">
                                 Voidigo is my favorite roguelike of all time. It includes beautiful, fluid animations, 
                                 funny yet powerful items, and intense boss battles, yet nobody seems to know it exists. 
                                 Let me tell you why this hidden gem deserves your attention and how it influenced my own game development approach.
@@ -109,7 +109,7 @@
                                 <span class="tag">Indie</span>
                                 <span class="tag">Roguelike</span>
                             </div>
-                            <div style="margin-top: var(--space-lg);">
+                            <div class="featured-post-action">
                                 <a href="voidigo.html" class="btn btn-primary">Read Full Post →</a>
                             </div>
                         </div>
@@ -125,20 +125,17 @@
                 <p class="text-center text-secondary">Development insights, reviews, and random thoughts</p>
                 
                 <!-- Filter/Search Bar -->
-                <div style="max-width: 500px; margin: var(--space-xl) auto; display: flex; gap: var(--space-md);">
-                    <div style="flex: 1; position: relative;">
+                <div class="blog-filters">
+                    <div class="search-container">
                         <input 
                             type="text" 
                             id="search-input" 
                             placeholder="search posts..." 
-                            style="width: 100%; padding: var(--space-sm) var(--space-md); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-primary); font-family: var(--font-body);"
+                            class="search-input"
                         >
-                        <span style="position: absolute; right: var(--space-md); top: 50%; transform: translateY(-50%); color: var(--text-muted);">🔍</span>
+                        <span class="search-icon">🔍</span>
                     </div>
-                    <select 
-                        id="category-filter" 
-                        style="padding: var(--space-sm) var(--space-md); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-primary); font-family: var(--font-body);"
-                    >
+                    <select id="category-filter" class="category-filter">
                         <option value="all">All Categories</option>
                         <option value="development">Development</option>
                         <option value="games">Games</option>
@@ -174,7 +171,7 @@
                                 <span class="tag">Programming</span>
                                 <span class="tag">Learning</span>
                             </div>
-                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                            <a href="#" class="btn btn-outline read-more-btn">Read More</a>
                         </div>
                     </article>
 
@@ -203,7 +200,7 @@
                                 <span class="tag">Tools</span>
                                 <span class="tag">Development</span>
                             </div>
-                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                            <a href="#" class="btn btn-outline read-more-btn">Read More</a>
                         </div>
                     </article>
 
@@ -232,7 +229,7 @@
                                 <span class="tag">Game Development</span>
                                 <span class="tag">Luau</span>
                             </div>
-                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                            <a href="#" class="btn btn-outline read-more-btn">Read More</a>
                         </div>
                     </article>
 
@@ -261,7 +258,7 @@
                                 <span class="tag">Programming</span>
                                 <span class="tag">Tutorial</span>
                             </div>
-                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                            <a href="#" class="btn btn-outline read-more-btn">Read More</a>
                         </div>
                     </article>
 
@@ -290,7 +287,7 @@
                                 <span class="tag">Development</span>
                                 <span class="tag">Workflow</span>
                             </div>
-                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                            <a href="#" class="btn btn-outline read-more-btn">Read More</a>
                         </div>
                     </article>
 
@@ -319,7 +316,7 @@
                                 <span class="tag">Reading</span>
                                 <span class="tag">Fantasy</span>
                             </div>
-                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                            <a href="#" class="btn btn-outline read-more-btn">Read More</a>
                         </div>
                     </article>
                 </div>
