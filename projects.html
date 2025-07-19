@@ -5,110 +5,341 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Benjamin Coad</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+    <meta name="description" content="Projects by Benjamin Coad - Games, tools, and creative applications built with various technologies.">
 </head>
 <body>
-<div class="game-container">
-    <header class="game-header">
-        <div class="retro-badge">
-            <span class="badge-text">bencoad.com</span>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Benjamin Coad</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">home</a></li>
+                    <li><a href="projects.html" class="nav-link active">projects</a></li>
+                    <li><a href="blog.html" class="nav-link">blog</a></li>
+                    <li><a href="art.html" class="nav-link">art</a></li>
+                    <li><a href="contact.html" class="nav-link">contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>Projects</h1>
-        <div class="pixel-divider"></div>
     </header>
 
-    <nav class="game-tabs">
-        <a href="index.html" class="game-tab">Home<span class="tab-hover">🏠</span></a>
-        <a href="projects.html" class="game-tab active">Projects<span class="tab-hover">💻</span></a>
-        <a href="blog.html" class="game-tab">Blog<span class="tab-hover">📝</span></a>
-        <a href="art.html" class="game-tab">Art<span class="tab-hover">🎨</span></a>
-        <a href="contact.html" class="game-tab">Contact<span class="tab-hover">📫</span></a>
-    </nav>
-
-    <main class="game-content">
-        <div class="grid-container">
-            <!-- Featured Project -->
-            <div class="content-section featured-project">
-                <h2>Featured Project</h2>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/project/just-a-hangout-img1.png" alt="Project Screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3>Just A Hangout</h3>
-                        <p>This is a recent roblox game that I completed and am working on updating currently.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Game</span>
-                            <span class="tech-tag">Luau</span>
-                            <span class="tech-tag">Roblox</span>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <div class="terminal-control control-close"></div>
+                            <div class="terminal-control control-minimize"></div>
+                            <div class="terminal-control control-maximize"></div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://www.roblox.com/games/112063832744922/just-a-hangout" class="game-button">Play</a>
+                        <div class="terminal-title">benjamin@bencoad.com: ~/projects</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> find . -name "*.project" -type f</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">./games/just-a-hangout.project</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">./games/ozymandias.project</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">./tools/plex-calculator.project</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> ls -la</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">total 42</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">drwxr-xr-x 5 benjamin benjamin 4096 Jan 19 2025 .</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">drwxr-xr-x 3 benjamin benjamin 4096 Jan 19 2025 ..</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">drwxr-xr-x 2 benjamin benjamin 4096 Jan 19 2025 games/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">drwxr-xr-x 2 benjamin benjamin 4096 Jan 19 2025 tools/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">drwxr-xr-x 2 benjamin benjamin 4096 Jan 19 2025 experiments/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor"></span>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Project Grid -->
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/project/ozymandias-img1.png" alt="Project 1">
-                    </div>
-                    <div class="project-content">
-                        <h3>Ozymandias</h3>
-                        <p>A cool little game I'm making entirely in Java with no game engine.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Game</span>
-                            <span class="tech-tag">Java</span>
+        <!-- Featured Project Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Featured Project</h2>
+                <p class="text-center text-secondary">My latest and most exciting work</p>
+                
+                <div style="margin-top: var(--space-xl); max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <div class="project-card" style="border: 2px solid var(--accent-orange); background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 107, 53, 0.05) 100%);">
+                        <div class="project-image" style="height: 300px;">
+                            <img src="assets/project/just-a-hangout-img1.png" alt="Just A Hangout">
                         </div>
-                        <a href="#" class="game-button">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/project/plex-system-calculator-img1.png" alt="Project 2">
-                    </div>
-                    <div class="project-content">
-                        <h3>PLEX System Calculator</h3>
-                        <p>A calculator made in Java Swing for a debt leverage financial system.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Java Swing</span>
+                        <div class="project-content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <h3 class="project-title" style="margin: 0;">Just A Hangout</h3>
+                                <span style="background: var(--gradient-orange); color: var(--bg-primary); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">FEATURED</span>
+                            </div>
+                            <p class="project-description" style="font-size: 1rem; line-height: 1.7;">
+                                A comprehensive Roblox experience that I recently completed and am actively updating with new features. 
+                                This project showcases advanced game mechanics, user interface design, and server-client architecture. 
+                                The game features multiple interactive areas, custom scripting, and a focus on social gameplay.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Luau</span>
+                                <span class="tech-tag">Roblox Studio</span>
+                                <span class="tech-tag">Game Development</span>
+                                <span class="tech-tag">UI Design</span>
+                                <span class="tech-tag">Multiplayer</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.roblox.com/games/112063832744922/just-a-hangout" class="btn btn-primary" target="_blank">
+                                    🎮 Play Game
+                                </a>
+                                <a href="#" class="btn btn-outline">
+                                    📖 Case Study
+                                </a>
+                            </div>
                         </div>
-                        <a href="#" class="game-button">Learn More</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <h2 class="text-center">All Projects</h2>
+                <p class="text-center text-secondary">A collection of games, tools, and experiments</p>
+                
+                <!-- Filter Buttons -->
+                <div style="display: flex; justify-content: center; gap: var(--space-md); margin: var(--space-xl) 0; flex-wrap: wrap;">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="games">Games</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="experiments">Experiments</button>
+                </div>
+                
+                <div class="projects-masonry" id="projects-grid">
+                    <!-- Game Projects -->
+                    <div class="project-card project-item" data-category="games">
+                        <div class="project-image">
+                            <img src="assets/project/ozymandias-img1.png" alt="Ozymandias">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Ozymandias</h3>
+                            <p class="project-description">
+                                A challenging 2D game built entirely in Java without any game engines. 
+                                This project demonstrates pure programming skills and custom graphics rendering.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">2D Graphics</span>
+                                <span class="tech-tag">No Engine</span>
+                                <span class="tech-tag">Custom Renderer</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline">View Code</a>
+                                <a href="#" class="btn btn-outline">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Projects -->
+                    <div class="project-card project-item" data-category="tools">
+                        <div class="project-image">
+                            <img src="assets/project/plex-system-calculator-img1.png" alt="PLEX System Calculator">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">PLEX System Calculator</h3>
+                            <p class="project-description">
+                                A specialized financial calculator built with Java Swing for calculating 
+                                debt leverage ratios in the PLEX financial system.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Swing</span>
+                                <span class="tech-tag">Finance</span>
+                                <span class="tech-tag">Desktop App</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline">Download</a>
+                                <a href="#" class="btn btn-outline">Source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Tool Project -->
+                    <div class="project-card project-item" data-category="tools">
+                        <div class="project-image" style="background: linear-gradient(135deg, var(--accent-green), var(--accent-orange)); display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; color: var(--bg-primary);">
+                                <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">🤖</h3>
+                                <p style="font-weight: 600;">AI Development Tool</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <h3 class="project-title" style="margin: 0;">AI Development Assistant</h3>
+                                <span style="background: var(--gradient-green); color: var(--bg-primary); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">IN PROGRESS</span>
+                            </div>
+                            <p class="project-description">
+                                Currently building an AI-powered tool to help developers write better code more efficiently. 
+                                Features intelligent suggestions and automated optimization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">AI/ML</span>
+                                <span class="tech-tag">API Integration</span>
+                                <span class="tech-tag">Developer Tools</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="project-card project-item" data-category="experiments">
+                        <div class="project-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--card-bg)); display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; color: var(--text-primary);">
+                                <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">🌐</h3>
+                                <p style="font-weight: 600; color: var(--accent-green);">This Website</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Personal Website</h3>
+                            <p class="project-description">
+                                A modern, developer-focused personal website built with performance and aesthetics in mind. 
+                                Features YouTube API integration and a terminal-inspired design.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">YouTube API</span>
+                                <span class="tech-tag">GitHub Pages</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/benjamincoad" class="btn btn-outline" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for future projects -->
+                    <div class="project-card project-item" data-category="experiments" style="border: 2px dashed var(--border-color); background: rgba(0, 255, 65, 0.02);">
+                        <div class="project-image" style="background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; color: var(--text-secondary);">
+                                <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">💡</h3>
+                                <p style="font-weight: 600;">Next Project</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title text-accent-green">Coming Soon...</h3>
+                            <p class="project-description">
+                                Always working on something new. Follow my journey on YouTube and GitHub 
+                                to see what I'm building next.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">TBD</span>
+                                <span class="tech-tag">Innovation</span>
+                                <span class="tech-tag">Experimentation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/@babjamin" class="btn btn-outline" target="_blank">Follow Updates</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section">
+            <div class="container">
+                <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 255, 65, 0.02) 100%);">
+                    <h2>Want to collaborate?</h2>
+                    <p class="text-secondary" style="font-size: 1.1rem; margin: var(--space-lg) 0;">
+                        I'm always interested in working on exciting projects, learning new technologies, 
+                        and connecting with fellow developers and creators.
+                    </p>
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                        <a href="https://github.com/benjamincoad" class="btn btn-outline" target="_blank">View GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="pixel-divider"></div>
-        <p>Made with ❤️ and ☕</p>
-        <div class="retro-links">
-            <a href="#">GitHub</a> •
-            <a href="#">Twitter</a> •
-            <a href="#">Email</a>
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/benjamincoad" class="footer-link" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.youtube.com/@babjamin" class="footer-link" target="_blank">YouTube</a></li>
+                    <li><a href="mailto:benjamin@coad.net" class="footer-link">Email</a></li>
+                </ul>
+                <p class="footer-text">Built with modern web standards • Hosted on GitHub Pages</p>
+            </div>
         </div>
     </footer>
-</div>
 
-<script>
-    document.querySelectorAll('.game-tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Get the content ID from the tab
-            const contentId = tab.getAttribute('data-content');
-
-            // If it's not the current page, navigate to it
-            if (contentId === 'home') window.location.href = 'index.html';
-            else if (contentId === 'blog') window.location.href = 'blog.html';
-            else if (contentId === 'contact') window.location.href = 'contact.html';
-            // Don't navigate if clicking projects tab since we're already here
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter projects
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                if (item.style.opacity === '0') {
+                                    item.style.display = 'none';
+                                }
+                            }, 250);
+                        }
+                    });
+                });
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

@@ -3,82 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Coad</title>
+    <title>Benjamin Coad - Developer & Creator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+    <meta name="description" content="Benjamin Coad - Developer, YouTuber, and Creative. Building tools, games, and sharing knowledge.">
 </head>
 <body>
-<div class="game-container">
-    <header class="game-header">
-        <h1><img src="benjamincoadfire.gif" alt="benjamincoadfire"></h1>
-        <p class="subtitle">Welcome to my corner of the internet</p>
-        <div class="pixel-divider"></div>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Benjamin Coad</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">home</a></li>
+                    <li><a href="projects.html" class="nav-link">projects</a></li>
+                    <li><a href="blog.html" class="nav-link">blog</a></li>
+                    <li><a href="art.html" class="nav-link">art</a></li>
+                    <li><a href="contact.html" class="nav-link">contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav class="game-tabs">
-        <a href="index.html" class="game-tab active">Home<span class="tab-hover">🏠</span></a>
-        <a href="projects.html" class="game-tab">Projects<span class="tab-hover">💻</span></a>
-        <a href="blog.html" class="game-tab">Blog<span class="tab-hover">📝</span></a>
-        <a href="art.html" class="game-tab">Art<span class="tab-hover">🎨</span></a>
-        <a href="contact.html" class="game-tab">Contact<span class="tab-hover">📫</span></a>
-    </nav>
-
-    <main class="game-content">
-        <div class="welcome-box">
-            <div class="avatar-container">
-                <div class="avatar-container">
-                    <img src="assets/avatar.jpg" alt="Profile Picture">
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <div class="terminal-control control-close"></div>
+                            <div class="terminal-control control-minimize"></div>
+                            <div class="terminal-control control-maximize"></div>
+                        </div>
+                        <div class="terminal-title">benjamin@bencoad.com: ~</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> whoami</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Benjamin Coad - Developer, Creator, Problem Solver</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> cat about.md</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Building tools that matter, games that entertain,</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">and sharing knowledge through code and creativity.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> ls current_projects/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">ai-tool/  java-games/  youtube-content/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="welcome-text">what is up peoples</p>
-        </div>
+        </section>
 
-        <div class="content-section featured">
-            <div class="section-header">
-                <h2>Latest Thing</h2>
-                <span class="pixel-star">★</span>
-            </div>
-            <p>some stuff I've been working on</p>
-            </br>
-            <button class="game-button">more →</button>
-        </div>
-
-        <div class="grid-container">
-            <div class="content-section">
-                <h2>Current Status</h2>
-                <div class="status-box">
-                    <div class="status-item">
-                        <span class="status-label">Making:</span>
-                        <span class="status-value">An AI tool</span>
+        <!-- Status Section -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">// Currently Making</h3>
+                        </div>
+                        <p class="text-accent-green">An AI tool for developers</p>
+                        <p class="text-secondary">Building something that makes coding more efficient and enjoyable.</p>
                     </div>
-                    <div class="status-item">
-                        <span class="status-label">Learning:</span>
-                        <span class="status-value">C (programming language)</span>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">// Learning</h3>
+                        </div>
+                        <p class="text-accent-orange">C Programming Language</p>
+                        <p class="text-secondary">Diving deep into systems programming and understanding how things work at a lower level.</p>
                     </div>
-                    <div class="status-item">
-                        <span class="status-label">Reading:</span>
-                        <span class="status-value">The Hobbit</span>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">// Reading</h3>
+                        </div>
+                        <p class="text-accent-green">The Hobbit</p>
+                        <p class="text-secondary">Taking a break from technical books to enjoy some classic fantasy adventure.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-section">
-                <h2>Message From Me</h2>
-                <blockquote class="thought-bubble">
-                    "heyoooooooooooooooo"
-                </blockquote>
+        <!-- YouTube Section -->
+        <section class="youtube-section section">
+            <div class="container">
+                <h2 class="text-center">Latest from YouTube</h2>
+                <p class="text-center text-secondary">Sharing my development journey and creative projects</p>
+                
+                <div class="youtube-grid" id="youtube-content">
+                    <div class="loading" id="youtube-loading">
+                        <div class="video-card">
+                            <div class="video-embed" style="background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center;">
+                                <p class="text-secondary">Loading latest videos...</p>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Loading...</h3>
+                                <p class="video-date">Getting latest content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--space-xl);">
+                    <a href="https://www.youtube.com/@babjamin" class="btn btn-secondary" target="_blank">
+                        View All Videos →
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Featured Projects</h2>
+                <p class="text-center text-secondary">Some things I've built recently</p>
+                
+                <div class="grid grid-3" style="margin-top: var(--space-xl);">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project/just-a-hangout-img1.png" alt="Just A Hangout">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Just A Hangout</h3>
+                            <p class="project-description">A Roblox game that I recently completed and am actively updating with new features and improvements.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Luau</span>
+                                <span class="tech-tag">Roblox Studio</span>
+                                <span class="tech-tag">Game Development</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.roblox.com/games/112063832744922/just-a-hangout" class="btn btn-primary" target="_blank">Play Game</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project/ozymandias-img1.png" alt="Ozymandias">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Ozymandias</h3>
+                            <p class="project-description">A game built entirely in Java without using any game engines - a challenge in pure programming.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">No Engine</span>
+                                <span class="tech-tag">2D Graphics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects.html" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project/plex-system-calculator-img1.png" alt="PLEX System Calculator">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">PLEX Calculator</h3>
+                            <p class="project-description">A Java Swing application for calculating debt leverage in a financial system called PLEX.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Swing</span>
+                                <span class="tech-tag">Finance</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects.html" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--space-xl);">
+                    <a href="projects.html" class="btn btn-primary">
+                        View All Projects →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Want to collaborate?</h3>
+                            <p class="card-subtitle">Let's build something together</p>
+                        </div>
+                        <p class="text-secondary">I'm always interested in working on exciting projects, whether it's building tools, creating games, or sharing knowledge.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Follow the journey</h3>
+                            <p class="card-subtitle">Stay updated on what I'm building</p>
+                        </div>
+                        <p class="text-secondary">Check out my latest projects on GitHub, watch development videos on YouTube, or read about my experiences on the blog.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="https://github.com/benjamincoad" class="btn btn-outline" target="_blank">GitHub</a>
+                            <a href="blog.html" class="btn btn-outline" style="margin-left: var(--space-sm);">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="pixel-divider"></div>
-        <p>bencoad.com</p>
-        <div class="retro-links">
-            <a href="https://github.com/benjamincoad">GitHub</a> •
-            <a href="https://www.youtube.com/@babjamin">YouTube</a> •
-            <a>benjamin@coad.net</a>
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/benjamincoad" class="footer-link" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.youtube.com/@babjamin" class="footer-link" target="_blank">YouTube</a></li>
+                    <li><a href="mailto:benjamin@coad.net" class="footer-link">Email</a></li>
+                </ul>
+                <p class="footer-text">Built with modern web standards • Hosted on GitHub Pages</p>
+            </div>
         </div>
     </footer>
-</div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

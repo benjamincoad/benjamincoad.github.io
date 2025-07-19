@@ -5,60 +5,424 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Benjamin Coad</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+    <meta name="description" content="Get in touch with Benjamin Coad - Developer, creator, and collaborator on exciting projects.">
 </head>
 <body>
-<div class="game-container">
-    <header class="game-header">
-        <div class="retro-badge">
-            <span class="badge-text">bencoad.com</span>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Benjamin Coad</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">home</a></li>
+                    <li><a href="projects.html" class="nav-link">projects</a></li>
+                    <li><a href="blog.html" class="nav-link">blog</a></li>
+                    <li><a href="art.html" class="nav-link">art</a></li>
+                    <li><a href="contact.html" class="nav-link active">contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>Contact</h1>
-        <div class="pixel-divider"></div>
     </header>
 
-    <nav class="game-tabs">
-        <a href="index.html" class="game-tab">Home<span class="tab-hover">🏠</span></a>
-        <a href="projects.html" class="game-tab">Projects<span class="tab-hover">💻</span></a>
-        <a href="blog.html" class="game-tab">Blog<span class="tab-hover">📝</span></a>
-        <a href="art.html" class="game-tab">Art<span class="tab-hover">🎨</span></a>
-        <a href="contact.html" class="game-tab active">Contact<span class="tab-hover">📫</span></a>
-    </nav>
-
-    <main class="game-content">
-        <div class="grid-container">
-            <div class="content-section">
-                <h2>Social Links</h2>
-                <div class="social-links">
-                    <a href="https://github.com/benjamincoad" class="social-link">
-                        <span class="social-icon">🐙</span>
-                        GitHub
-                    </a>
-                    <a href="https://www.youtube.com/@babjamin" class="social-link">
-                        <span class="social-icon">📹</span>
-                        YouTube
-                    </a>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <div class="terminal-control control-close"></div>
+                            <div class="terminal-control control-minimize"></div>
+                            <div class="terminal-control control-maximize"></div>
+                        </div>
+                        <div class="terminal-title">benjamin@bencoad.com: ~/contact</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> ping benjamin@coad.net</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">PING benjamin@coad.net (192.168.1.1) 56(84) bytes of data.</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">64 bytes from benjamin@coad.net: icmp_seq=1 ttl=64 time=0.042ms</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">64 bytes from benjamin@coad.net: icmp_seq=2 ttl=64 time=0.038ms</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> finger benjamin@coad.net</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Login: benjamin   Name: Benjamin Coad</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Directory: /home/benjamin   Shell: /bin/zsh</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Currently online, ready to collaborate</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> echo "Let's build something together"</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">Let's build something together</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-section">
-                <h2>Email</h2>
-                <p>For direct contact:</p>
-                <a href="mailto:benjamin@coad.net" class="email-link">
-                    benjamin@coad.net
-                </a>
+        <!-- Contact Methods -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Get In Touch</h2>
+                <p class="text-center text-secondary">Ready to collaborate, discuss ideas, or just say hello</p>
+                
+                <div class="contact-grid">
+                    <!-- Email Card -->
+                    <div class="contact-card email-card">
+                        <div class="contact-icon">
+                            <span style="font-size: 2.5rem;">📧</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p class="text-secondary">Best for project inquiries and detailed discussions</p>
+                            <a href="mailto:benjamin@coad.net" class="contact-link">
+                                benjamin@coad.net
+                            </a>
+                            <div class="contact-meta">
+                                <span class="status-indicator online"></span>
+                                <span>Usually responds within 24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Card -->
+                    <div class="contact-card github-card">
+                        <div class="contact-icon">
+                            <span style="font-size: 2.5rem;">🐙</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <p class="text-secondary">Follow my code, contribute to projects, or start discussions</p>
+                            <a href="https://github.com/benjamincoad" class="contact-link" target="_blank">
+                                github.com/benjamincoad
+                            </a>
+                            <div class="contact-meta">
+                                <span class="status-indicator active"></span>
+                                <span>Active daily</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Card -->
+                    <div class="contact-card youtube-card">
+                        <div class="contact-icon">
+                            <span style="font-size: 2.5rem;">📹</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>YouTube</h3>
+                            <p class="text-secondary">Watch my development journey and creative projects</p>
+                            <a href="https://www.youtube.com/@babjamin" class="contact-link" target="_blank">
+                                youtube.com/@babjamin
+                            </a>
+                            <div class="contact-meta">
+                                <span class="status-indicator active"></span>
+                                <span>New videos regularly</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Quick Contact Form -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <h2 class="text-center">Quick Message</h2>
+                    <p class="text-center text-secondary">Send me a quick message right here</p>
+                    
+                    <form id="contact-form" class="contact-form" style="margin-top: var(--space-xl);">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choose a topic...</option>
+                                <option value="collaboration">Project Collaboration</option>
+                                <option value="question">Technical Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="opportunity">Job/Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project, question, or just say hello..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message
+                        </button>
+                        
+                        <p class="form-note">
+                            This form will open your email client with a pre-filled message. 
+                            You can also reach me directly at <a href="mailto:benjamin@coad.net">benjamin@coad.net</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration Info -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">What I'm Looking For</h3>
+                            <p class="card-subtitle">Exciting collaboration opportunities</p>
+                        </div>
+                        <div class="collaboration-list">
+                            <div class="collaboration-item">
+                                <span class="collaboration-icon">🎮</span>
+                                <div>
+                                    <h4>Game Development</h4>
+                                    <p class="text-secondary">Indie games, prototypes, or game jam projects</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-item">
+                                <span class="collaboration-icon">🛠️</span>
+                                <div>
+                                    <h4>Developer Tools</h4>
+                                    <p class="text-secondary">Building tools that make developers more productive</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-item">
+                                <span class="collaboration-icon">🎨</span>
+                                <div>
+                                    <h4>Creative Projects</h4>
+                                    <p class="text-secondary">Blending art, technology, and innovation</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-item">
+                                <span class="collaboration-icon">📚</span>
+                                <div>
+                                    <h4>Knowledge Sharing</h4>
+                                    <p class="text-secondary">Technical writing, tutorials, or educational content</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Current Availability</h3>
+                            <p class="card-subtitle">My schedule and capacity</p>
+                        </div>
+                        <div class="availability-info">
+                            <div class="availability-item">
+                                <div class="availability-header">
+                                    <span class="status-indicator online"></span>
+                                    <h4>Available for Projects</h4>
+                                </div>
+                                <p class="text-secondary">Open to new collaborations and interesting opportunities</p>
+                            </div>
+                            
+                            <div class="availability-item">
+                                <div class="availability-header">
+                                    <span class="status-indicator active"></span>
+                                    <h4>Response Time</h4>
+                                </div>
+                                <p class="text-secondary">Typically respond to emails within 24-48 hours</p>
+                            </div>
+                            
+                            <div class="availability-item">
+                                <div class="availability-header">
+                                    <span class="status-indicator active"></span>
+                                    <h4>Time Zone</h4>
+                                </div>
+                                <p class="text-secondary">Eastern Time (UTC-5/-4) - Available for global collaboration</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--border-color);">
+                            <h4 style="color: var(--accent-green); margin-bottom: var(--space-sm);">Preferred Communication</h4>
+                            <p class="text-secondary">Email for detailed discussions, GitHub for code-related topics, and video calls for complex projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <h2 class="text-center">Frequently Asked</h2>
+                <p class="text-center text-secondary">Common questions about working together</p>
+                
+                <div class="faq-list" style="max-width: 800px; margin: var(--space-xl) auto 0;">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What types of projects do you work on?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I work on a wide range of projects including games (especially in Roblox/Luau and Java), developer tools, web applications, and creative experiments. I'm particularly interested in projects that combine programming with creativity or solve real problems for developers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you take on freelance or contract work?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, I'm open to both freelance projects and collaborative work. I prefer projects where I can contribute meaningfully and learn something new. Reach out with your project details and we can discuss how I might be able to help.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What programming languages and technologies do you use?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently working with Java, Luau (Roblox), C, JavaScript, HTML/CSS, and various web technologies. I'm always learning new technologies and enjoy exploring different programming paradigms and tools.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do you prefer to collaborate on projects?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I prefer clear communication through email or GitHub discussions, regular check-ins for longer projects, and using version control (Git) for code collaboration. I'm comfortable with both remote and hybrid collaboration styles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="pixel-divider"></div>
-        <p>bencoad.com</p>
-        <div class="retro-links">
-            <a href="https://github.com/benjamincoad">GitHub</a> •
-            <a href="https://www.youtube.com/@babjamin">YouTube</a> •
-            <a href="benjamin@coad.net">Email</a>
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/benjamincoad" class="footer-link" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.youtube.com/@babjamin" class="footer-link" target="_blank">YouTube</a></li>
+                    <li><a href="mailto:benjamin@coad.net" class="footer-link">Email</a></li>
+                </ul>
+                <p class="footer-text">Built with modern web standards • Hosted on GitHub Pages</p>
+            </div>
         </div>
     </footer>
-</div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:benjamin@coad.net?subject=${encodeURIComponent(subject + ' - From ' + name)}&body=${encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nSent from bencoad.com contact form`
+            )}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show confirmation
+            const button = e.target.querySelector('button');
+            const originalText = button.textContent;
+            button.textContent = 'Opening Email Client...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.textContent = 'Message Prepared!';
+                button.style.background = 'var(--gradient-green)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    button.style.background = '';
+                }, 3000);
+            }, 1000);
+        });
+
+        // FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('open');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('open');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                        otherItem.querySelector('.faq-toggle').textContent = '+';
+                    });
+                    
+                    // Toggle current item
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        toggle.textContent = '−';
+                    }
+                });
+            });
+        });
+
+        // Contact card hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactCards = document.querySelectorAll('.contact-card');
+            
+            contactCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = 'var(--shadow-lg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

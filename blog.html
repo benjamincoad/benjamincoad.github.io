@@ -1,119 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Benjamin Coad</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Benjamin Coad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+    <meta name="description" content="Blog by Benjamin Coad - Development insights, project updates, and thoughts on technology.">
 </head>
 <body>
-<div class="game-container">
-  <header class="game-header">
-    <div class="retro-badge">
-      <span class="badge-text">bencoad.com</span>
-    </div>
-    <h1>Blog</h1>
-    <div class="pixel-divider"></div>
-  </header>
-
-  <nav class="game-tabs">
-    <a href="index.html" class="game-tab">Home<span class="tab-hover">🏠</span></a>
-    <a href="projects.html" class="game-tab">Projects<span class="tab-hover">💻</span></a>
-    <a href="blog.html" class="game-tab active">Blog<span class="tab-hover">📝</span></a>
-    <a href="art.html" class="game-tab">Art<span class="tab-hover">🎨</span></a>
-    <a href="contact.html" class="game-tab">Contact<span class="tab-hover">📫</span></a>
-  </nav>
-
-  <main class="game-content">
-    <!-- Featured Post -->
-    <div class="content-section featured-post">
-      <span class="post-date">January 25, 2025</span>
-      <h2>Voidigo: The Best Roguelike Nobody Knows About</h2>
-      <div class="post-preview">
-        <img src="assets/blog/voidigo-img1.jpg" alt="Featured Post Image" class="featured-image">
-        <p>Voidigo is my favorite roguelike of all time. It includes beautiful, fluid animations, funny yet powerful items, and intense boss battles and yet nobody seems to know it exists.</p>
-        <div class="post-tags">
-          <span class="tag">Games</span>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Benjamin Coad</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">home</a></li>
+                    <li><a href="projects.html" class="nav-link">projects</a></li>
+                    <li><a href="blog.html" class="nav-link active">blog</a></li>
+                    <li><a href="art.html" class="nav-link">art</a></li>
+                    <li><a href="contact.html" class="nav-link">contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <a href="#" class="game-button">Read More</a>
-      </div>
-    </div>
+    </header>
 
-    <!-- Blog Posts Grid -->
-    <div class="blog-grid">
-      <!-- Post 1 -->
-      <article class="blog-card">
-        <div class="post-image">
-          <img src="/api/placeholder/400/200" alt="Blog Post 1">
-        </div>
-        <div class="post-content">
-          <span class="post-date">January 20, 2025</span>
-          <h3>Blog Post Title</h3>
-          <p>Short preview of the blog post content...</p>
-          <div class="post-tags">
-            <span class="tag">Code</span>
-            <span class="tag">Tutorial</span>
-          </div>
-          <a href="#" class="game-button">Read More</a>
-        </div>
-      </article>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <div class="terminal-control control-close"></div>
+                            <div class="terminal-control control-minimize"></div>
+                            <div class="terminal-control control-maximize"></div>
+                        </div>
+                        <div class="terminal-title">benjamin@bencoad.com: ~/blog</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> grep -r "insights" ./posts/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">./posts/voidigo-review.md: Development insights from gaming</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">./posts/learning-c.md: Programming language insights</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> wc -l ./posts/*.md</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">  247 ./posts/voidigo-review.md</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">  156 ./posts/learning-c.md</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">  403 total</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> echo "sharing knowledge through writing"</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-output">sharing knowledge through writing</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Post 2 -->
-      <article class="blog-card">
-        <div class="post-image">
-          <img src="/api/placeholder/400/200" alt="Blog Post 2">
-        </div>
-        <div class="post-content">
-          <span class="post-date">January 15, 2025</span>
-          <h3>Another Blog Post</h3>
-          <p>Another preview of blog content...</p>
-          <div class="post-tags">
-            <span class="tag">Projects</span>
-            <span class="tag">Updates</span>
-          </div>
-          <a href="#" class="game-button">Read More</a>
-        </div>
-      </article>
+        <!-- Featured Post -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Featured Post</h2>
+                <p class="text-center text-secondary">Latest thoughts and insights</p>
+                
+                <div style="margin-top: var(--space-xl); max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <article class="blog-card" style="border: 2px solid var(--accent-green); background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 255, 65, 0.03) 100%);">
+                        <div class="blog-image" style="height: 300px;">
+                            <img src="assets/blog/voidigo-img1.jpg" alt="Voidigo - The Best Roguelike Nobody Knows About">
+                        </div>
+                        <div class="blog-content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <span style="background: var(--gradient-green); color: var(--bg-primary); padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">FEATURED</span>
+                                <span class="blog-date">January 25, 2025</span>
+                            </div>
+                            <h3 class="blog-title" style="font-size: 1.5rem; margin-bottom: var(--space-md);">
+                                Voidigo: The Best Roguelike Nobody Knows About
+                            </h3>
+                            <p class="blog-excerpt" style="font-size: 1rem; line-height: 1.7; margin-bottom: var(--space-lg);">
+                                Voidigo is my favorite roguelike of all time. It includes beautiful, fluid animations, 
+                                funny yet powerful items, and intense boss battles, yet nobody seems to know it exists. 
+                                Let me tell you why this hidden gem deserves your attention and how it influenced my own game development approach.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">Games</span>
+                                <span class="tag">Reviews</span>
+                                <span class="tag">Indie</span>
+                                <span class="tag">Roguelike</span>
+                            </div>
+                            <div style="margin-top: var(--space-lg);">
+                                <a href="voidigo.html" class="btn btn-primary">Read Full Post →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-      <!-- Post 3 -->
-      <article class="blog-card">
-        <div class="post-image">
-          <img src="/api/placeholder/400/200" alt="Blog Post 3">
-        </div>
-        <div class="post-content">
-          <span class="post-date">January 10, 2025</span>
-          <h3>Yet Another Post</h3>
-          <p>More blog post preview content...</p>
-          <div class="post-tags">
-            <span class="tag">Thoughts</span>
-            <span class="tag">Tech</span>
-          </div>
-          <a href="#" class="game-button">Read More</a>
-        </div>
-      </article>
-    </div>
-  </main>
+        <!-- Blog Posts Grid -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <h2 class="text-center">All Posts</h2>
+                <p class="text-center text-secondary">Development insights, reviews, and random thoughts</p>
+                
+                <!-- Filter/Search Bar -->
+                <div style="max-width: 500px; margin: var(--space-xl) auto; display: flex; gap: var(--space-md);">
+                    <div style="flex: 1; position: relative;">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="search posts..." 
+                            style="width: 100%; padding: var(--space-sm) var(--space-md); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-primary); font-family: var(--font-body);"
+                        >
+                        <span style="position: absolute; right: var(--space-md); top: 50%; transform: translateY(-50%); color: var(--text-muted);">🔍</span>
+                    </div>
+                    <select 
+                        id="category-filter" 
+                        style="padding: var(--space-sm) var(--space-md); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-primary); font-family: var(--font-body);"
+                    >
+                        <option value="all">All Categories</option>
+                        <option value="development">Development</option>
+                        <option value="games">Games</option>
+                        <option value="reviews">Reviews</option>
+                        <option value="tutorials">Tutorials</option>
+                        <option value="thoughts">Thoughts</option>
+                    </select>
+                </div>
+                
+                <div class="blog-grid" id="blog-posts">
+                    <!-- Post 1 -->
+                    <article class="blog-card post-item" data-category="development" data-tags="c programming learning">
+                        <div class="blog-image">
+                            <div style="background: linear-gradient(135deg, var(--accent-green), var(--bg-tertiary)); height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; color: var(--text-primary);">
+                                    <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">⚡</h3>
+                                    <p style="font-weight: 600;">Learning C</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 20, 2025</span>
+                                <span class="blog-category">Development</span>
+                            </div>
+                            <h3 class="blog-title">Why I'm Learning C in 2025</h3>
+                            <p class="blog-excerpt">
+                                Diving into C programming has been an eye-opening experience. Here's why I think 
+                                every developer should understand systems programming, even in the age of high-level languages.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Learning</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                        </div>
+                    </article>
 
-  <footer class="footer">
-    <div class="pixel-divider"></div>
-    <p>Made with ❤️ and ☕</p>
-    <div class="retro-links">
-      <a href="#">GitHub</a> •
-      <a href="#">Twitter</a> •
-      <a href="#">Email</a>
-    </div>
-  </footer>
-</div>
+                    <!-- Post 2 -->
+                    <article class="blog-card post-item" data-category="development" data-tags="ai tools development">
+                        <div class="blog-image">
+                            <div style="background: linear-gradient(135deg, var(--accent-orange), var(--bg-tertiary)); height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; color: var(--text-primary);">
+                                    <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">🤖</h3>
+                                    <p style="font-weight: 600;">AI & Development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 18, 2025</span>
+                                <span class="blog-category">Development</span>
+                            </div>
+                            <h3 class="blog-title">Building AI Tools for Developers</h3>
+                            <p class="blog-excerpt">
+                                My journey creating an AI-powered development assistant. The challenges, breakthroughs, 
+                                and lessons learned while building tools that actually help developers be more productive.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Tools</span>
+                                <span class="tag">Development</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                        </div>
+                    </article>
 
-<script>
-  document.querySelectorAll('.game-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      const contentId = tab.getAttribute('data-content');
-      if (contentId === 'home') window.location.href = 'index.html';
-      else if (contentId === 'projects') window.location.href = 'projects.html';
-      else if (contentId === 'contact') window.location.href = 'contact.html';
-    });
-  });
-</script>
+                    <!-- Post 3 -->
+                    <article class="blog-card post-item" data-category="games" data-tags="roblox game development">
+                        <div class="blog-image">
+                            <div style="background: linear-gradient(135deg, var(--accent-green), var(--accent-orange)); height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; color: var(--bg-primary);">
+                                    <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">🎮</h3>
+                                    <p style="font-weight: 600;">Game Dev</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 15, 2025</span>
+                                <span class="blog-category">Games</span>
+                            </div>
+                            <h3 class="blog-title">Lessons from Building "Just A Hangout"</h3>
+                            <p class="blog-excerpt">
+                                What I learned while creating my latest Roblox game. From initial concept to 
+                                player feedback, here are the key insights from the development process.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">Roblox</span>
+                                <span class="tag">Game Development</span>
+                                <span class="tag">Luau</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-card post-item" data-category="tutorials" data-tags="java programming tutorial">
+                        <div class="blog-image">
+                            <div style="background: var(--bg-tertiary); height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; color: var(--text-secondary);">
+                                    <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">☕</h3>
+                                    <p style="font-weight: 600;">Java Tutorial</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 12, 2025</span>
+                                <span class="blog-category">Tutorials</span>
+                            </div>
+                            <h3 class="blog-title">Building Games Without Engines</h3>
+                            <p class="blog-excerpt">
+                                A step-by-step guide to creating 2D games in pure Java. Learn how to handle graphics, 
+                                input, and game loops without relying on external game engines.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Tutorial</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="blog-card post-item" data-category="thoughts" data-tags="productivity development workflow">
+                        <div class="blog-image">
+                            <div style="background: linear-gradient(45deg, var(--bg-tertiary), var(--card-bg)); height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; color: var(--text-primary);">
+                                    <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">💭</h3>
+                                    <p style="font-weight: 600;">Thoughts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 10, 2025</span>
+                                <span class="blog-category">Thoughts</span>
+                            </div>
+                            <h3 class="blog-title">My Development Workflow in 2025</h3>
+                            <p class="blog-excerpt">
+                                How I stay productive while juggling multiple projects. My current tools, techniques, 
+                                and strategies for maintaining focus in a world full of distractions.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">Productivity</span>
+                                <span class="tag">Development</span>
+                                <span class="tag">Workflow</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="blog-card post-item" data-category="reviews" data-tags="books reading hobbit">
+                        <div class="blog-image">
+                            <div style="background: linear-gradient(135deg, #8B4513, #D2691E); height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; color: var(--text-primary);">
+                                    <h3 style="font-size: 2rem; margin-bottom: var(--space-sm);">📚</h3>
+                                    <p style="font-weight: 600;">Book Review</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 8, 2025</span>
+                                <span class="blog-category">Reviews</span>
+                            </div>
+                            <h3 class="blog-title">Why The Hobbit Still Matters</h3>
+                            <p class="blog-excerpt">
+                                Re-reading Tolkien's classic while taking a break from technical books. 
+                                Thoughts on storytelling, world-building, and why fantasy literature inspires better code.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">Books</span>
+                                <span class="tag">Reading</span>
+                                <span class="tag">Fantasy</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="margin-top: var(--space-md);">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="no-results" class="text-center" style="display: none; margin-top: var(--space-xl);">
+                    <div class="card" style="max-width: 400px; margin: 0 auto;">
+                        <h3>No posts found</h3>
+                        <p class="text-secondary">Try adjusting your search or filter criteria.</p>
+                        <button id="clear-filters" class="btn btn-outline" style="margin-top: var(--space-md);">Clear Filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section">
+            <div class="container">
+                <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 107, 53, 0.02) 100%);">
+                    <h2>Stay Updated</h2>
+                    <p class="text-secondary" style="font-size: 1.1rem; margin: var(--space-lg) 0;">
+                        Get notified when I publish new posts about development, games, and technology. 
+                        Follow my journey through different channels.
+                    </p>
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                        <a href="https://www.youtube.com/@babjamin" class="btn btn-primary" target="_blank">
+                            📹 YouTube
+                        </a>
+                        <a href="https://github.com/benjamincoad" class="btn btn-outline" target="_blank">
+                            🐙 GitHub
+                        </a>
+                        <a href="mailto:benjamin@coad.net" class="btn btn-outline">
+                            📧 Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/benjamincoad" class="footer-link" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.youtube.com/@babjamin" class="footer-link" target="_blank">YouTube</a></li>
+                    <li><a href="mailto:benjamin@coad.net" class="footer-link">Email</a></li>
+                </ul>
+                <p class="footer-text">Built with modern web standards • Hosted on GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Blog search and filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-input');
+            const categoryFilter = document.getElementById('category-filter');
+            const blogPosts = document.querySelectorAll('.post-item');
+            const noResults = document.getElementById('no-results');
+            const clearFilters = document.getElementById('clear-filters');
+            
+            function filterPosts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCategory = categoryFilter.value;
+                let visibleCount = 0;
+                
+                blogPosts.forEach(post => {
+                    const title = post.querySelector('.blog-title').textContent.toLowerCase();
+                    const excerpt = post.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    const tags = post.getAttribute('data-tags').toLowerCase();
+                    const category = post.getAttribute('data-category');
+                    
+                    const matchesSearch = !searchTerm || 
+                        title.includes(searchTerm) || 
+                        excerpt.includes(searchTerm) || 
+                        tags.includes(searchTerm);
+                    
+                    const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+                    
+                    if (matchesSearch && matchesCategory) {
+                        post.style.display = 'block';
+                        post.style.opacity = '1';
+                        post.style.transform = 'translateY(0)';
+                        visibleCount++;
+                    } else {
+                        post.style.opacity = '0';
+                        post.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            if (post.style.opacity === '0') {
+                                post.style.display = 'none';
+                            }
+                        }, 250);
+                    }
+                });
+                
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+            
+            // Event listeners
+            searchInput.addEventListener('input', filterPosts);
+            categoryFilter.addEventListener('change', filterPosts);
+            
+            clearFilters.addEventListener('click', function() {
+                searchInput.value = '';
+                categoryFilter.value = 'all';
+                filterPosts();
+            });
+        });
+    </script>
 </body>
 </html>
